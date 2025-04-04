@@ -3,7 +3,7 @@ import { EthicsReportForm } from "./components/EthicsReportForm"
 import { LandingPage } from "./components/LandingPage"
 import { ThemeProvider } from "./components/ThemeProvider"
 import { Toaster } from "./components/ui/toaster"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
   return (
