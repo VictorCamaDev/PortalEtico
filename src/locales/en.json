@@ -1,0 +1,247 @@
+{
+  "app": {
+    "title": "Grupo Silvestre Ethics",
+    "description": "Ethical irregularities reporting system"
+  },
+  "landing": {
+    "introduction": "Introduction",
+    "introText": "allows you to report possible deviations from the Group's Code of Ethics and/or policies. It allows reporting conduct that may be illegal, unethical, or that violates professional standards; that is, that are inconsistent with the Group's Code of Ethics. You can register irregularities using the service channels indicated in the following section.",
+    "serviceChannels": "Service Channels",
+    "webForm": "Web Form",
+    "registerNewIrregularity": "To register a new irregularity, you can go to the following link:",
+    "registerButton": "Register irregularity",
+    "mailbox": "Email Inbox",
+    "emailInstructions": "You can send an email to the following address:",
+    "voicemail": "Voicemail",
+    "voicemailInstructions": "You can report an irregularity through a voice message 24 hours a day, 365 days a year, by dialing option 2 at the following number:",
+    "tollFree": "toll-free number",
+    "phoneLine": "Phone Line",
+    "phoneLineInstructions": "You can contact a professional directly from Monday to Friday from 8:00 a.m. to 5:00 p.m. at the following number:",
+    "inPersonAndMail": "In-person Interview and Postal Address",
+    "inPersonInstructions": "If you wish to be attended in person, go to:",
+    "askFor": "Ask for:",
+    "appointmentRequired": "In-person interviews are available by appointment.",
+    "mailInstructions": "If you want to provide physical information, send it to the following address at any time:",
+    "attention": "Attention:",
+    "reference": "Reference:",
+    "copyright": "Copyright",
+    "allRightsReserved": "All rights reserved"
+  },
+  "navigation": {
+    "home": "Home",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit report"
+  },
+  "steps": {
+    "mainData": "Main data",
+    "additionalData": "Additional data",
+    "contact": "Contact Options",
+    "personalInfo": "Personal information",
+    "summary": "Summary"
+  },
+  "form": {
+    "required": "* Required field",
+    "multipleSelection": "You can select multiple options",
+    "yes": "Yes",
+    "no": "No",
+    "other": "Other",
+    "specify": "Specify",
+    "writeHere": "Write here...",
+    "select": "Select"
+  },
+  "additionalQuestions": {
+    "howDidYouKnow": "How did you become aware of these facts?",
+    "itHappenedToMe": "It happened to me",
+    "iWasWitness": "I was a witness",
+    "coworkerToldMe": "A coworker told me about the situation",
+    "iOverheard": "I overheard it by chance",
+    "involvesExternalPeople": "Does this incident involve people outside the group?",
+    "who": "Who?",
+    "enterNamesOrDetails": "Enter names or details",
+    "beingHidden": "Do you believe these facts are being hidden in any way?",
+    "how": "How?",
+    "byWhom": "By whom?",
+    "describeHowHidden": "Describe how it's being hidden",
+    "managementKnows": "Does any director, manager, assistant manager, or supervisor know about these facts?",
+    "managementInfo": "Indicate if someone in a position of responsibility has prior knowledge of this irregularity.",
+    "relationshipType": "What type of relationship exists between the people involved?",
+    "familial": "Family",
+    "work": "Work",
+    "friendship": "Friendship",
+    "which": "Which?",
+    "benefits": "What types of benefits do the people involved in the irregularity receive?",
+    "witnesses": "What witnesses do you think could contribute more evidence of this irregularity?"
+  },
+  "question1": {
+    "label": "Select the type of irregularity you want to report",
+    "options": {
+      "conflictsOfInterest": "⚖️ Conflicts of interest",
+      "bribery": "💰 Bribes or kickbacks",
+      "confidentialInfoLeak": "🔓 Confidential information leak",
+      "resourceMisuse": "🏢 Misuse of resources",
+      "discrimination": "🚫 Discrimination/Harassment",
+      "documentDestruction": "📝 Document destruction",
+      "lawViolation": "⚖️ Law violations",
+      "policyViolation": "📋 Policy violations",
+      "otherUnethical": "⚠️ Other unethical activities"
+    },
+    "specify": "Specify"
+  },
+  "question2": {
+    "label": "Identify the people involved",
+    "add": "Add",
+    "person": "Person",
+    "fields": {
+      "firstName": "First name",
+      "lastName": "Last name",
+      "relation": "Relationship with the Group",
+      "specify": "Specify (company / position / other)"
+    },
+    "options": {
+      "employee": "Employee",
+      "supplier": "Supplier",
+      "client": "Client",
+      "investor": "Investor",
+      "other": "Other"
+    }
+  },
+  "question3": {
+    "label": "Indicate where the incident occurred",
+    "fields": {
+      "country": "Country",
+      "state": "State / Province",
+      "city": "City",
+      "location": "Location",
+      "specifyLocation": "Specify location"
+    },
+    "options": {
+      "plantCajamarquilla": "Cajamarquilla Plant",
+      "officesMiraflores": "Miraflores Offices",
+      "peripheralWarehouse": "Peripheral Warehouse",
+      "other": "Other (specify)"
+    }
+  },
+  "question4": {
+    "label": "Indicate the date or period when the incident occurred",
+    "selectDate": "Select a date"
+  },
+  "question5": {
+    "label": "Describe all the details that help analyze and evaluate your irregularity",
+    "placeholder": "Include relevant information such as dates, places, people involved, and a detailed description of the facts.",
+    "characters": "characters"
+  },
+  "question6": {
+    "label": "Do you have physical or digital evidence that could help in the investigation?",
+    "options": {
+      "notPossible": "It is not possible for me to provide any evidence",
+      "notHave": "I don't have evidence, but I could obtain it",
+      "bothTypes": "I have physical and digital evidence that I would like to provide",
+      "physical": "I have physical evidence that I want to provide",
+      "digital": "I have digital evidence that I want to provide"
+    },
+    "fields": {
+      "physicalDelivery": "Indicate how you will deliver the physical information",
+      "digitalFiles": "Select digital evidence (max. 5 files, 20MB)",
+      "whereToObtain": "Where could the Group obtain evidence?",
+      "whereElse": "Where else could evidence be obtained?"
+    },
+    "fileAttach": "Files will be attached when submitting the form."
+  },
+  "question17": {
+    "label": "Which of the following options best describes your relationship with the Group?",
+    "options": {
+      "employee": "Employee",
+      "supplier": "Supplier",
+      "client": "Client",
+      "exEmployee": "Former Employee",
+      "other": "Other"
+    },
+    "specify": "Specify"
+  },
+  "question18": {
+    "label": "Do you want to keep your identity anonymous?",
+    "options": {
+      "no": "No",
+      "yes": "Yes"
+    },
+    "emailContact": "Provide an email address to maintain contact",
+    "emailNote": "This email will be used only for communications related to your report."
+  },
+  "personalInfo": {
+    "title": "Optional Contact Information",
+    "subtitle": "If you have no objection to sharing your identity  \"Optional Contact Information",
+    "subtitle": "If you have no objection to sharing your identity, please provide the following optional information",
+    "anonymous": "You have chosen to keep your identity anonymous. You can continue to the next step.",
+    "fields": {
+      "fullName": "Enter your full name",
+      "phone": "Enter a contact phone number",
+      "email": "Enter a contact email address",
+      "otherContact": "Indicate any other form of contact",
+      "position": "Indicate your position in the Group",
+      "area": "Indicate the area to which you belong"
+    },
+    "areas": {
+      "hr": "HR",
+      "finance": "Finance",
+      "accounting": "Accounting",
+      "management": "Management",
+      "other": "Others"
+    }
+  },
+  "summary": {
+    "title": "Report Summary",
+    "reviewNote": "Please review the information before submitting your report. Once submitted, you will receive a tracking code.",
+    "sections": {
+      "mainData": "Main Data",
+      "mainDataDesc": "Basic information about the irregularity",
+      "contactData": "Contact Data",
+      "contactDataDesc": "Information to communicate with you"
+    },
+    "fields": {
+      "irregularityTypes": "Types of irregularity",
+      "date": "Incident date",
+      "location": "Location",
+      "involvedPeople": "People involved",
+      "details": "Details",
+      "evidence": "Evidence",
+      "whereToObtain": "Where to obtain",
+      "relationWithGroup": "Relationship with the Group",
+      "anonymousReport": "Anonymous report",
+      "contactEmail": "Contact email",
+      "name": "Name",
+      "phone": "Phone",
+      "email": "Email",
+      "position": "Position",
+      "area": "Area"
+    },
+    "notSpecified": "Not specified",
+    "terms": {
+      "authorize": "I authorize Grupo Silvestre to process my personal data",
+      "agreement": "By submitting this form, I agree that I have read the personal data processing clause."
+    },
+    "submitNote": "Click the \"Submit report\" button to register your irregularity. You will receive a tracking code for future inquiries."
+  },
+  "success": {
+    "title": "Report successfully submitted",
+    "message": "You will be redirected to the home page in a few seconds...",
+    "code": "Your report has been registered with the code: GS-"
+  },
+  "errors": {
+    "incompleteFields": "Please complete all required fields before continuing.",
+    "termsRequired": "You must accept the terms and conditions to submit the report.",
+    "submitError": "Error submitting the report",
+    "tryAgain": "Please try again later.",
+    "requiredField": "This field is required",
+    "selectAtLeastOne": "You must select at least one option",
+    "countryRequired": "Country is required",
+    "stateRequired": "State/Province is required",
+    "cityRequired": "City is required",
+    "locationRequired": "Location is required",
+    "relationRequired": "You must indicate your relationship with the Group",
+    "anonymityRequired": "You must indicate if you want to keep your identity anonymous",
+    "emailRequired": "Email address is required",
+    "invalidEmail": "Please enter a valid email address"
+  }
+}
+

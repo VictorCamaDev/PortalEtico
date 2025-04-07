@@ -88,7 +88,7 @@ export function Main() {
                       4. Línea Telefónica
                     </p>
                     <p className="text-start">
-                      Puede contactarse directamente con un profesional de Lunes a Viernes de 8:30 a.m. a 6:30 p.m. al
+                      Puede contactarse directamente con un profesional de Lunes a Viernes de 8:00 a.m. a 5:00 p.m. al
                       siguiente número:
                     </p>
                     <p className="text-start">0-800-1-8106 (número gratuito)</p>

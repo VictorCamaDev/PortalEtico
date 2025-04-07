@@ -1,0 +1,246 @@
+{
+  "app": {
+    "title": "Grupo Silvestre Ético",
+    "description": "Sistema de reporte de irregularidades éticas"
+  },
+  "landing": {
+    "introduction": "Introducción",
+    "introText": "le permite informar posibles desviamientos del Código de Ética y/o políticas del Grupo. Permite reportar conductas que pueden ser ilegales, no éticas o que violen las normas profesionales; es decir, que sean inconsistentes con el Código de Ética del Grupo. Puede registrar irregularidades utilizando los canales de atención que se indican en la siguiente sección.",
+    "serviceChannels": "Canales de Atención",
+    "webForm": "Formulario Web",
+    "registerNewIrregularity": "Para registrar una nueva irregularidad, puede ir al siguiente enlace:",
+    "registerButton": "Registrar irregularidad",
+    "mailbox": "Buzón de Correo",
+    "emailInstructions": "Puede enviar un correo electrónico a la siguiente dirección:",
+    "voicemail": "Buzón de Voz",
+    "voicemailInstructions": "Puede informar una irregularidad a través de un mensaje de voz las 24 horas del día durante los 365 días del año, marcando la opción 2 en el siguiente número:",
+    "tollFree": "número gratuito",
+    "phoneLine": "Línea Telefónica",
+    "phoneLineInstructions": "Puede contactarse directamente con un profesional de Lunes a Viernes de 8:00 a.m. a 5:00 p.m. al siguiente número:",
+    "inPersonAndMail": "Entrevista personal y Dirección Postal",
+    "inPersonInstructions": "Si desea ser atendido personalmente, diríjase a:",
+    "askFor": "Preguntar por:",
+    "appointmentRequired": "Las entrevistas presenciales están disponibles con previa cita.",
+    "mailInstructions": "Si desea proporcionar información física, envíala a la siguiente dirección en cualquier momento:",
+    "attention": "Atención:",
+    "reference": "Referencia:",
+    "copyright": "Copyright",
+    "allRightsReserved": "Todos los derechos reservados"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "next": "Siguiente",
+    "previous": "Anterior",
+    "submit": "Enviar reporte"
+  },
+  "steps": {
+    "mainData": "Datos principales",
+    "additionalData": "Datos adicionales",
+    "contact": "Opciones de Contacto",
+    "personalInfo": "Información personal",
+    "summary": "Resumen"
+  },
+  "form": {
+    "required": "* Campo requerido",
+    "multipleSelection": "Puede seleccionar múltiples opciones",
+    "yes": "Sí",
+    "no": "No",
+    "other": "Otros",
+    "specify": "Especificar",
+    "writeHere": "Escriba aquí...",
+    "select": "Seleccione"
+  },
+  "additionalQuestions": {
+    "howDidYouKnow": "¿Cómo tomó conocimiento de estos hechos?",
+    "itHappenedToMe": "Me sucedió a mí",
+    "iWasWitness": "Fui testigo",
+    "coworkerToldMe": "Un compañero de trabajo me comentó la situación",
+    "iOverheard": "Lo escuché de casualidad",
+    "involvesExternalPeople": "¿Este incidente involucra a personas externas al grupo?",
+    "who": "¿Quiénes?",
+    "enterNamesOrDetails": "Ingrese nombres o detalles",
+    "beingHidden": "¿Cree usted que estos hechos están siendo ocultados de alguna manera?",
+    "how": "¿Cómo?",
+    "byWhom": "¿Por quiénes?",
+    "describeHowHidden": "Describa cómo se está ocultando",
+    "managementKnows": "¿Alguna dirección, gerencia, subgerencia o jefatura conoce de estos hechos?",
+    "managementInfo": "Indique si alguien en un cargo de responsabilidad tiene conocimiento previo sobre esta irregularidad.",
+    "relationshipType": "¿Qué tipo de relación existe entre las personas involucradas?",
+    "familial": "Familiar",
+    "work": "Laboral",
+    "friendship": "Amical",
+    "which": "¿Cuál?",
+    "benefits": "¿Qué tipos de beneficios reciben las personas involucradas en la irregularidad?",
+    "witnesses": "¿Qué testigos considera que podrían contribuir con mayor evidencia de esta irregularidad?"
+  },
+  "question1": {
+    "label": "Seleccione el tipo de irregularidad que desea reportar",
+    "options": {
+      "conflictsOfInterest": "⚖️ Conflictos de interés",
+      "bribery": "💰 Sobornos o coimas",
+      "confidentialInfoLeak": "🔓 Fuga de información confidencial",
+      "resourceMisuse": "🏢 Mal uso de recursos",
+      "discrimination": "🚫 Discriminación/Acoso",
+      "documentDestruction": "📝 Destrucción de documentos",
+      "lawViolation": "⚖️ Incumplimiento de leyes",
+      "policyViolation": "📋 Incumplimiento de políticas",
+      "otherUnethical": "⚠️ Otras actividades no éticas"
+    },
+    "specify": "Especificar"
+  },
+  "question2": {
+    "label": "Identifique a las personas involucradas",
+    "add": "Agregar",
+    "person": "Involucrado",
+    "fields": {
+      "firstName": "Nombres",
+      "lastName": "Apellidos",
+      "relation": "Relación con el Grupo",
+      "specify": "Especificar (empresa / cargo / otro)"
+    },
+    "options": {
+      "employee": "Empleado",
+      "supplier": "Proveedor",
+      "client": "Cliente",
+      "investor": "Inversionista",
+      "other": "Otro"
+    }
+  },
+  "question3": {
+    "label": "Indique en qué lugar sucedió el incidente",
+    "fields": {
+      "country": "País",
+      "state": "Estado / Provincia",
+      "city": "Ciudad",
+      "location": "Sede",
+      "specifyLocation": "Especificar sede"
+    },
+    "options": {
+      "plantCajamarquilla": "Planta Cajamarquilla",
+      "officesMiraflores": "Oficinas Miraflores",
+      "peripheralWarehouse": "Almacén periférico",
+      "other": "Otro (especificar)"
+    }
+  },
+  "question4": {
+    "label": "Indique la fecha o período en el cual sucedió el incidente",
+    "selectDate": "Seleccione una fecha"
+  },
+  "question5": {
+    "label": "Describa todos los detalles que ayuden a analizar y evaluar su irregularidad",
+    "placeholder": "Incluya información relevante como fechas, lugares, personas involucradas y descripción detallada de los hechos.",
+    "characters": "caracteres"
+  },
+  "question6": {
+    "label": "¿Posee usted evidencia física o digital que pueda ayudar en la investigación?",
+    "options": {
+      "notPossible": "No me es posible proporcionar evidencias de ningún tipo",
+      "notHave": "No tengo evidencias, pero podría obtenerlas",
+      "bothTypes": "Tengo evidencia física y digital que me gustaría entregar",
+      "physical": "Tengo evidencia física que deseo entregar",
+      "digital": "Tengo evidencia digital que deseo entregar"
+    },
+    "fields": {
+      "physicalDelivery": "Indique la forma en la que entregará la información física",
+      "digitalFiles": "Seleccione evidencias digitales (máx. 5 archivos, 20MB)",
+      "whereToObtain": "¿Dónde el Grupo podría obtener evidencia?",
+      "whereElse": "¿Dónde más se podría obtener evidencia?"
+    },
+    "fileAttach": "Los archivos se adjuntarán al enviar el formulario."
+  },
+  "question17": {
+    "label": "¿Cuál de las siguientes opciones describe mejor su relación con el Grupo?",
+    "options": {
+      "employee": "Empleado",
+      "supplier": "Proveedor",
+      "client": "Cliente",
+      "exEmployee": "Ex Empleado",
+      "other": "Otro"
+    },
+    "specify": "Especificar"
+  },
+  "question18": {
+    "label": "¿Desea mantener su identidad en el anonimato?",
+    "options": {
+      "no": "No",
+      "yes": "Sí"
+    },
+    "emailContact": "Proporcione una cuenta de correo electrónico para mantener contacto",
+    "emailNote": "Este correo se utilizará únicamente para comunicaciones relacionadas con su reporte."
+  },
+  "personalInfo": {
+    "title": "Información Opcional de Contacto",
+    "subtitle": "En caso de no tener inconveniente de compartir su identidad, por favor proporcione la siguiente información opcional",
+    "anonymous": "Ha elegido mantener su identidad en el anonimato. Puede continuar al siguiente paso.",
+    "fields": {
+      "fullName": "Indique sus nombres y apellidos",
+      "phone": "Indique un teléfono de contacto",
+      "email": "Indique un correo electrónico de contacto",
+      "otherContact": "Indique cualquier otra forma de contacto",
+      "position": "Indique el cargo que ocupa en el Grupo",
+      "area": "Indique el área a la cual pertenece"
+    },
+    "areas": {
+      "hr": "RRHH",
+      "finance": "Finanzas",
+      "accounting": "Contabilidad",
+      "management": "Gerencia",
+      "other": "Otros"
+    }
+  },
+  "summary": {
+    "title": "Resumen del Reporte",
+    "reviewNote": "Por favor revise la información antes de enviar su reporte. Una vez enviado, recibirá un código de seguimiento.",
+    "sections": {
+      "mainData": "Datos Principales",
+      "mainDataDesc": "Información básica sobre la irregularidad",
+      "contactData": "Datos de Contacto",
+      "contactDataDesc": "Información para comunicarnos con usted"
+    },
+    "fields": {
+      "irregularityTypes": "Tipos de irregularidad",
+      "date": "Fecha del incidente",
+      "location": "Ubicación",
+      "involvedPeople": "Personas involucradas",
+      "details": "Detalles",
+      "evidence": "Evidencia",
+      "whereToObtain": "Dónde obtener",
+      "relationWithGroup": "Relación con el Grupo",
+      "anonymousReport": "Reporte anónimo",
+      "contactEmail": "Correo de contacto",
+      "name": "Nombre",
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "position": "Cargo",
+      "area": "Área"
+    },
+    "notSpecified": "No especificado",
+    "terms": {
+      "authorize": "Autorizo a Grupo Silvestre a realizar el tratamiento de mis datos personales",
+      "agreement": "Al enviar este formulario, acepto que he leído la cláusula de tratamiento de datos personales."
+    },
+    "submitNote": "Pulse el botón \"Enviar reporte\" para registrar su irregularidad. Recibirá un código de seguimiento para consultas futuras."
+  },
+  "success": {
+    "title": "Reporte enviado con éxito",
+    "message": "Será redirigido a la página principal en unos segundos...",
+    "code": "Su reporte ha sido registrado con el código: GS-"
+  },
+  "errors": {
+    "incompleteFields": "Por favor complete todos los campos requeridos antes de continuar.",
+    "termsRequired": "Debe aceptar los términos y condiciones para enviar el reporte.",
+    "submitError": "Error al enviar el reporte",
+    "tryAgain": "Por favor, inténtelo de nuevo más tarde.",
+    "requiredField": "Este campo es requerido",
+    "selectAtLeastOne": "Debe seleccionar al menos una opción",
+    "countryRequired": "El país es requerido",
+    "stateRequired": "La provincia es requerida",
+    "cityRequired": "La ciudad es requerida",
+    "locationRequired": "La sede es requerida",
+    "relationRequired": "Debe indicar su relación con el Grupo",
+    "anonymityRequired": "Debe indicar si desea mantener su identidad en el anonimato",
+    "emailRequired": "El correo electrónico es requerido",
+    "invalidEmail": "Por favor ingrese un correo electrónico válido"
+  }
+}
+

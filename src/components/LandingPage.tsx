@@ -6,18 +6,17 @@ import { Separator } from "@/components/ui/separator"
 import { Mail, Phone, MessageSquare, MapPin } from "lucide-react"
 import logogs from "../assets/images/logo-gruposilvestre.jpg"
 import { useNavigate } from "react-router-dom"
-import { env } from "../lib/env" 
+import { env } from "../lib/env"
+import { useTranslation } from "react-i18next"
+import { LanguageSwitcher } from "../components/LanguageSwitcher"
 
 export function LandingPage() {
   const navigate = useNavigate()
+  const { t } = useTranslation()
 
   const handleRegisterClick = () => {
     navigate("/register")
   }
-
-  // const handleConsultClick = () => {
-  //   window.open(env.consultaUrl, "_blank")
-  // }
 
   return (
     <div className="container mx-auto py-8 px-4">
@@ -25,23 +24,22 @@ export function LandingPage() {
         <CardHeader className="border-b">
           <div className="flex justify-between items-center">
             <div>
-              <CardTitle className="text-2xl text-primary">{env.appName}</CardTitle>
-              <CardDescription>Sistema de reporte de irregularidades éticas</CardDescription>
+              <CardTitle className="text-2xl text-primary">{t("app.title")}</CardTitle>
+              <CardDescription>{t("app.description")}</CardDescription>
             </div>
-            <img src={logogs || "/placeholder.svg"} alt="Logo Grupo Silvestre" className="h-16 w-auto" />
+            <div className="flex items-center gap-2">
+              <LanguageSwitcher />
+              <img src={logogs || "/placeholder.svg"} alt="Logo Grupo Silvestre" className="h-16 w-auto" />
+            </div>
           </div>
         </CardHeader>
 
         <CardContent className="pt-6 space-y-6">
           {/* Introducción */}
           <div className="space-y-2">
-            <h2 className="text-xl font-semibold text-primary">Introducción</h2>
+            <h2 className="text-xl font-semibold text-primary">{t("landing.introduction")}</h2>
             <p className="text-muted-foreground">
-              <span className="font-medium text-foreground">{env.appName}</span> le permite informar posibles
-              desviamientos del Código de Ética y/o políticas del Grupo. Permite reportar conductas que pueden ser
-              ilegales, no éticas o que violen las normas profesionales; es decir, que sean inconsistentes con el Código
-              de Ética del Grupo. Puede registrar irregularidades utilizando los canales de atención que se indican en
-              la siguiente sección.
+              <span className="font-medium text-foreground">{t("app.title")}</span> {t("landing.introText")}
             </p>
           </div>
 
@@ -49,23 +47,18 @@ export function LandingPage() {
 
           {/* Canales de Atención */}
           <div className="space-y-4">
-            <h2 className="text-xl font-semibold text-primary">Canales de Atención</h2>
+            <h2 className="text-xl font-semibold text-primary">{t("landing.serviceChannels")}</h2>
 
             {/* 1. Formulario Web */}
             <Card className="border-primary/10">
               <CardHeader className="pb-2">
-                <CardTitle className="text-lg text-primary">1. Formulario Web</CardTitle>
+                <CardTitle className="text-lg text-primary">1. {t("landing.webForm")}</CardTitle>
               </CardHeader>
               <CardContent className="pb-4 space-y-4">
-                <p>Para registrar una nueva irregularidad, puede ir al siguiente enlace:</p>
+                <p>{t("landing.registerNewIrregularity")}</p>
                 <Button onClick={handleRegisterClick} className="w-full sm:w-auto">
-                  Registrar irregularidad
+                  {t("landing.registerButton")}
                 </Button>
-{/* 
-                <p>Para consultar el estado de una irregularidad ya registrada, puede ir al siguiente enlace:</p>
-                <Button variant="outline" onClick={handleConsultClick} className="w-full sm:w-auto">
-                  Consultar irregularidad <ExternalLink className="ml-2 h-4 w-4" />
-                </Button> */}
               </CardContent>
             </Card>
 
@@ -74,11 +67,11 @@ export function LandingPage() {
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg flex items-center gap-2">
                   <Mail className="h-5 w-5 text-primary" />
-                  2. Buzón de Correo
+                  2. {t("landing.mailbox")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p>Puede enviar un correo electrónico a la siguiente dirección:</p>
+                <p>{t("landing.emailInstructions")}</p>
                 <a href={`mailto:${env.supportEmail}`} className="text-primary hover:underline font-medium">
                   {env.supportEmail}
                 </a>
@@ -90,15 +83,14 @@ export function LandingPage() {
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg flex items-center gap-2">
                   <MessageSquare className="h-5 w-5 text-primary" />
-                  3. Buzón de Voz
+                  3. {t("landing.voicemail")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p>
-                  Puede informar una irregularidad a través de un mensaje de voz las 24 horas del día durante los 365
-                  días del año, marcando la opción 2 en el siguiente número:
+                <p>{t("landing.voicemailInstructions")}</p>
+                <p className="font-medium">
+                  {env.supportPhone} ({t("landing.tollFree")})
                 </p>
-                <p className="font-medium">{env.supportPhone} (número gratuito)</p>
               </CardContent>
             </Card>
 
@@ -107,15 +99,14 @@ export function LandingPage() {
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg flex items-center gap-2">
                   <Phone className="h-5 w-5 text-primary" />
-                  4. Línea Telefónica
+                  4. {t("landing.phoneLine")}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p>
-                  Puede contactarse directamente con un profesional de Lunes a Viernes de 8:30 a.m. a 6:30 p.m. al
-                  siguiente número:
+                <p>{t("landing.phoneLineInstructions")}</p>
+                <p className="font-medium">
+                  {env.supportPhone} ({t("landing.tollFree")})
                 </p>
-                <p className="font-medium">{env.supportPhone} (número gratuito)</p>
               </CardContent>
             </Card>
 
@@ -124,27 +115,25 @@ export function LandingPage() {
               <CardHeader className="pb-2">
                 <CardTitle className="text-lg flex items-center gap-2">
                   <MapPin className="h-5 w-5 text-primary" />
-                  5. Entrevista personal y Dirección Postal
+                  5. {t("landing.inPersonAndMail")}
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div>
-                  <p>Si desea ser atendido personalmente, diríjase a:</p>
+                  <p>{t("landing.inPersonInstructions")}</p>
                   <p className="font-medium">{env.officeAddress}</p>
                   <p>
-                    <span className="font-medium">Preguntar por:</span> {env.contactPerson}
+                    <span className="font-medium">{t("landing.askFor")}</span> {env.contactPerson}
                   </p>
-                  <p>Las entrevistas presenciales están disponibles con previa cita.</p>
+                  <p>{t("landing.appointmentRequired")}</p>
                 </div>
 
                 <div>
-                  <p>
-                    Si desea proporcionar información física, envíala a la siguiente dirección en cualquier momento:
-                  </p>
+                  <p>{t("landing.mailInstructions")}</p>
                   <p className="font-medium">{env.officeAddress}</p>
                   <p>
-                    <span className="font-medium">Atención:</span> {env.contactPerson},{" "}
-                    <span className="font-medium">Referencia:</span> {env.appName}
+                    <span className="font-medium">{t("landing.attention")}</span> {env.contactPerson},{" "}
+                    <span className="font-medium">{t("landing.reference")}</span> {t("app.title")}
                   </p>
                 </div>
               </CardContent>
@@ -155,9 +144,9 @@ export function LandingPage() {
         <CardFooter className="border-t py-4 bg-primary/10 text-center text-sm text-muted-foreground">
           <div className="w-full">
             <p>
-              Copyright © {new Date().getFullYear()} {env.appName}
+              {t("landing.copyright")} © {new Date().getFullYear()} {t("app.title")}
             </p>
-            <p>Todos los derechos reservados</p>
+            <p>{t("landing.allRightsReserved")}</p>
           </div>
         </CardFooter>
       </Card>
