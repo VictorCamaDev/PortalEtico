@@ -27,13 +27,13 @@ export function Pregunta13() {
         className="flex gap-6"
       >
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="no" id="conocimiento_no" />
+          <RadioGroupItem value="No" id="conocimiento_no" />
           <Label htmlFor="conocimiento_no" className="font-normal flex items-center gap-2">
             {t("form.no")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="si" id="conocimiento_si" />
+          <RadioGroupItem value="Sí" id="conocimiento_si" />
           <Label htmlFor="conocimiento_si" className="font-normal flex items-center gap-2">
             {t("form.yes")}
           </Label>

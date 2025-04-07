@@ -23,13 +23,13 @@ export function Pregunta11() {
         className="flex gap-6"
       >
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="no" id="involucra_no" />
+          <RadioGroupItem value="No" id="involucra_no" />
           <Label htmlFor="involucra_no" className="font-normal flex items-center gap-2">
             {t("form.no")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="si" id="involucra_si" />
+          <RadioGroupItem value="Sí" id="involucra_si" />
           <Label htmlFor="involucra_si" className="font-normal flex items-center gap-2">
             {t("form.yes")}
           </Label>

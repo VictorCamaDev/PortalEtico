@@ -42,13 +42,13 @@ export function Pregunta18() {
 
       <RadioGroup onValueChange={(value) => setValue("anonimo", value)} value={anonimo} className="flex gap-6">
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="no" id="anonimo_no" />
+          <RadioGroupItem value="No" id="anonimo_no" />
           <Label htmlFor="anonimo_no" className="font-normal flex items-center gap-2">
             <UserRound className="h-4 w-4 text-primary" /> {t("form.no")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="si" id="anonimo_si" />
+          <RadioGroupItem value="Sí" id="anonimo_si" />
           <Label htmlFor="anonimo_si" className="font-normal flex items-center gap-2">
             <UserX2 className="h-4 w-4 text-gray-600" /> {t("form.yes")}
           </Label>

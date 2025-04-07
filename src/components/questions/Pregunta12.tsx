@@ -20,13 +20,13 @@ export function Pregunta12() {
 
       <RadioGroup onValueChange={(value) => setValue("ocultado", value)} value={ocultado} className="flex gap-6">
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="no" id="ocultado_no" />
+          <RadioGroupItem value="No" id="ocultado_no" />
           <Label htmlFor="ocultado_no" className="font-normal flex items-center gap-2">
             {t("form.no")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="si" id="ocultado_si" />
+          <RadioGroupItem value="Sí" id="ocultado_si" />
           <Label htmlFor="ocultado_si" className="font-normal flex items-center gap-2">
             {t("form.yes")}
           </Label>

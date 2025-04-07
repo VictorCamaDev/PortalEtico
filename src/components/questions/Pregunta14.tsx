@@ -19,32 +19,32 @@ export function Pregunta14() {
 
       <RadioGroup onValueChange={(value) => setValue("relacion", value)} value={relacion} className="space-y-3">
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Familiar" id="relacion_familiar" />
+          <RadioGroupItem value="Relación familiar" id="relacion_familiar" />
           <Label htmlFor="relacion_familiar" className="font-normal flex items-center gap-2">
             {t("additionalQuestions.familial")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Laboral" id="relacion_laboral" />
+          <RadioGroupItem value="Relación laboral" id="relacion_laboral" />
           <Label htmlFor="relacion_laboral" className="font-normal flex items-center gap-2">
             {t("additionalQuestions.work")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Amical" id="relacion_amical" />
+          <RadioGroupItem value="Relación amical" id="relacion_amical" />
           <Label htmlFor="relacion_amical" className="font-normal flex items-center gap-2">
             {t("additionalQuestions.friendship")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Otro" id="relacion_otro" />
+          <RadioGroupItem value="Otra relación" id="relacion_otro" />
           <Label htmlFor="relacion_otro" className="font-normal flex items-center gap-2">
             {t("form.other")}
           </Label>
         </div>
       </RadioGroup>
 
-      {relacion === "Otro" && (
+      {relacion === "Otra relación" && (
         <div className="ml-6 space-y-2">
           <Label htmlFor="relacionOtro">{t("additionalQuestions.which")}</Label>
           <Input

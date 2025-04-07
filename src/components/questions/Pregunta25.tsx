@@ -17,38 +17,38 @@ export function Pregunta25() {
 
       <RadioGroup onValueChange={(value) => setValue("area", value)} value={area} className="space-y-3">
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="RRHH" id="area_rrhh" />
+          <RadioGroupItem value="Recursos Humanos" id="area_rrhh" />
           <Label htmlFor="area_rrhh" className="font-normal flex items-center gap-2">
             <Users className="h-4 w-4 text-blue-600" /> RRHH
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Finanzas" id="area_finanzas" />
+          <RadioGroupItem value="Área de Finanzas" id="area_finanzas" />
           <Label htmlFor="area_finanzas" className="font-normal flex items-center gap-2">
             <Landmark className="h-4 w-4 text-green-600" /> Finanzas
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Contabilidad" id="area_contabilidad" />
+          <RadioGroupItem value="Área de Contabilidad" id="area_contabilidad" />
           <Label htmlFor="area_contabilidad" className="font-normal flex items-center gap-2">
             <Building className="h-4 w-4 text-amber-600" /> Contabilidad
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Gerencia" id="area_gerencia" />
+          <RadioGroupItem value="Área de Gerencia" id="area_gerencia" />
           <Label htmlFor="area_gerencia" className="font-normal flex items-center gap-2">
             <Building2 className="h-4 w-4 text-purple-600" /> Gerencia
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Otros" id="area_otros" />
+          <RadioGroupItem value="Otras Áreas" id="area_otros" />
           <Label htmlFor="area_otros" className="font-normal flex items-center gap-2">
             <HelpCircle className="h-4 w-4 text-gray-600" /> Otros
           </Label>
         </div>
       </RadioGroup>
 
-      {area === "Otros" && (
+      {area === "Otras Áreas" && (
         <div className="ml-6 space-y-2">
           <Label htmlFor="areaOtro">Especificar</Label>
           <Input

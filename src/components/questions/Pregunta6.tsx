@@ -37,31 +37,31 @@ export function Pregunta6() {
         className="space-y-3"
       >
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="no_posible" id="no_posible" />
+          <RadioGroupItem value="No me es posible proporcionar evidencias de ningún tipo" id="no_posible" />
           <Label htmlFor="no_posible" className="font-normal">
             {t("question6.options.notPossible")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="no_tengo" id="no_tengo" />
+          <RadioGroupItem value="No tengo evidencias, pero podría obtenerlas" id="no_tengo" />
           <Label htmlFor="no_tengo" className="font-normal">
             {t("question6.options.notHave")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="fisica_digital" id="fisica_digital" />
+          <RadioGroupItem value="Tengo evidencia física y digital que me gustaría entregar" id="fisica_digital" />
           <Label htmlFor="fisica_digital" className="font-normal">
             {t("question6.options.bothTypes")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="fisica" id="fisica" />
+          <RadioGroupItem value="Tengo evidencia física que deseo entregar" id="fisica" />
           <Label htmlFor="fisica" className="font-normal">
             {t("question6.options.physical")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="digital" id="digital" />
+          <RadioGroupItem value="Tengo evidencia digital que deseo entregar" id="digital" />
           <Label htmlFor="digital" className="font-normal">
             {t("question6.options.digital")}
           </Label>
@@ -93,7 +93,7 @@ export function Pregunta6() {
         </div>
       )}
 
-      {["no_posible", "no_tengo", "fisica", "digital", "fisica_digital"].includes(evidenciaTipo) && (
+      {["No me es posible proporcionar evidencias de ningún tipo", "No tengo evidencias, pero podría obtenerlas", "Tengo evidencia física que deseo entregar", "Tengo evidencia digital que deseo entregar", "Tengo evidencia física y digital que me gustaría entregar"].includes(evidenciaTipo) && (
         <div className="ml-6 space-y-2">
           <Label htmlFor="evidencia.dondeObtener">
             {evidenciaTipo === "no_posible" || evidenciaTipo === "no_tengo"
