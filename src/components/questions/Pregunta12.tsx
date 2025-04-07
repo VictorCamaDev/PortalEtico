@@ -18,22 +18,26 @@ export function Pregunta12() {
     <div className="space-y-4 pt-4 border-t">
       <Label className="text-base font-medium">{t("additionalQuestions.beingHidden")}</Label>
 
-      <RadioGroup onValueChange={(value) => setValue("ocultado", value)} value={ocultado} className="flex gap-6">
+      <RadioGroup 
+        onValueChange={(value) => setValue("ocultado", value)} 
+        value={ocultado} 
+        className="flex gap-6"
+      >
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="No" id="ocultado_no" />
+          <RadioGroupItem value="no" id="ocultado_no" />
           <Label htmlFor="ocultado_no" className="font-normal flex items-center gap-2">
             {t("form.no")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Sí" id="ocultado_si" />
+          <RadioGroupItem value="si" id="ocultado_si" />
           <Label htmlFor="ocultado_si" className="font-normal flex items-center gap-2">
             {t("form.yes")}
           </Label>
         </div>
       </RadioGroup>
 
-      {ocultado === "Sí" && (
+      {ocultado === "si" && (
         <div className="ml-6 space-y-4">
           <div className="space-y-2">
             <Label htmlFor="comoOcultado">{t("additionalQuestions.how")}</Label>

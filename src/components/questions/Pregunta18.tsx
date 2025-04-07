@@ -26,7 +26,7 @@ export function Pregunta18() {
 
     // Registrar correoContacto con validación condicional
     register("correoContacto", {
-      required: anonimo === "Sí" ? t("errors.emailRequired") : false,
+      required: anonimo === "si" ? t("errors.emailRequired") : false,
       pattern: {
         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
         message: t("errors.invalidEmail"),
@@ -40,22 +40,26 @@ export function Pregunta18() {
         {t("question18.label")} <span className="text-destructive">*</span>
       </Label>
 
-      <RadioGroup onValueChange={(value) => setValue("anonimo", value)} value={anonimo} className="flex gap-6">
+      <RadioGroup 
+        onValueChange={(value) => setValue("anonimo", value)} 
+        value={anonimo} 
+        className="flex gap-6"
+      >
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="No" id="anonimo_no" />
+          <RadioGroupItem value="no" id="anonimo_no" />
           <Label htmlFor="anonimo_no" className="font-normal flex items-center gap-2">
             <UserRound className="h-4 w-4 text-primary" /> {t("form.no")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Sí" id="anonimo_si" />
+          <RadioGroupItem value="si" id="anonimo_si" />
           <Label htmlFor="anonimo_si" className="font-normal flex items-center gap-2">
             <UserX2 className="h-4 w-4 text-gray-600" /> {t("form.yes")}
           </Label>
         </div>
       </RadioGroup>
 
-      {anonimo === "Sí" && (
+      {anonimo === "si" && (
         <div className="ml-6 space-y-2 pt-4">
           <Label htmlFor="correoContacto" className="text-base font-medium flex items-center gap-2">
             <Mail className="h-4 w-4 text-blue-600" />

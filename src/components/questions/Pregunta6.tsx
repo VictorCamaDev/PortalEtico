@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useFormContext } from "react-hook-form"
 import type { FormData } from "../EthicsReportForm"
 import { Label } from "@/components/ui/label"
@@ -14,10 +14,28 @@ import { FileUp } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
 export function Pregunta6() {
-  const { setValue, watch } = useFormContext<FormData>()
+  const { setValue, watch, register } = useFormContext<FormData>()
   const evidenciaTipo = watch("evidencia.tipo") || ""
   const [archivos, setArchivos] = useState<File[]>([])
   const { t } = useTranslation()
+
+  useEffect(() => {
+    // Registrar campos obligatorios
+    register("evidencia.tipo", { required: t("errors.evidenceTypeRequired") })
+
+    // Validaciones condicionales
+    if (evidenciaTipo === "Tengo evidencia física que deseo entregar") {
+      register("evidencia.entregaFisica", { required: t("errors.specifyPhysicalDelivery") })
+    }
+
+    if (evidenciaTipo === "Tengo evidencia digital que deseo entregar") {
+      register("evidencia.archivos", { required: t("errors.specifyDigitalFiles") })
+    }
+
+    if (["No me es posible proporcionar evidencias de ningún tipo", "No tengo evidencias, pero podría obtenerlas"].includes(evidenciaTipo)) {
+      register("evidencia.dondeObtener", { required: t("errors.specifyWhereToObtain") })
+    }
+  }, [register, t, evidenciaTipo])
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && archivos.length < 5) {

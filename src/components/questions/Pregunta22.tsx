@@ -22,7 +22,7 @@ export function Pregunta22() {
   // Registrar el campo como requerido si el usuario no es anónimo
   useEffect(() => {
     register("correo", {
-      required: anonimo === "no" ? t("errors.emailRequired") : false,
+      required: anonimo === "No" ? t("errors.emailRequired") : false,
       pattern: {
         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
         message: t("errors.invalidEmail"),
@@ -34,7 +34,7 @@ export function Pregunta22() {
     <div className="space-y-2 pt-4 border-t">
       <Label htmlFor="correo" className="text-base font-medium flex items-center gap-2">
         <Mail className="h-4 w-4 text-blue-600" />
-        {t("personalInfo.fields.email")} {anonimo === "no" && <span className="text-destructive">*</span>}
+        {t("personalInfo.fields.email")} {anonimo === "No" && <span className="text-destructive">*</span>}
       </Label>
       <Input
         id="correo"
@@ -43,7 +43,7 @@ export function Pregunta22() {
         onChange={(e) => setValue("correo", e.target.value)}
         placeholder="ejemplo@correo.com"
         className={`max-w-md ${errors.correo ? "border-destructive" : ""}`}
-        required={anonimo === "no"}
+        required={anonimo === "No"}
       />
       {errors.correo && (
         <p className="text-sm text-destructive">{errors.correo.message?.toString() || t("errors.emailRequired")}</p>

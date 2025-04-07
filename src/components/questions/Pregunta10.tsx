@@ -17,7 +17,11 @@ export function Pregunta10() {
     <div className="space-y-4">
       <Label className="text-base font-medium">{t("additionalQuestions.howDidYouKnow")}</Label>
 
-      <RadioGroup onValueChange={(value) => setValue("conocimiento", value)} value={conocimiento} className="space-y-3">
+      <RadioGroup 
+        onValueChange={(value) => setValue("conocimiento", value)} 
+        value={conocimiento} 
+        className="space-y-3"
+      >
         <div className="flex items-center space-x-2">
           <RadioGroupItem value="me_sucedio" id="me_sucedio" />
           <Label htmlFor="me_sucedio" className="font-normal flex items-center gap-2">

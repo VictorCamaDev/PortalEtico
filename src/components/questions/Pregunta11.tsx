@@ -23,20 +23,20 @@ export function Pregunta11() {
         className="flex gap-6"
       >
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="No" id="involucra_no" />
+          <RadioGroupItem value="no" id="involucra_no" />
           <Label htmlFor="involucra_no" className="font-normal flex items-center gap-2">
             {t("form.no")}
           </Label>
         </div>
         <div className="flex items-center space-x-2">
-          <RadioGroupItem value="Sí" id="involucra_si" />
+          <RadioGroupItem value="si" id="involucra_si" />
           <Label htmlFor="involucra_si" className="font-normal flex items-center gap-2">
             {t("form.yes")}
           </Label>
         </div>
       </RadioGroup>
 
-      {involucraExternos === "Sí" && (
+      {involucraExternos === "si" && (
         <div className="ml-6 space-y-2">
           <Label htmlFor="quienesExternos">{t("additionalQuestions.who")}</Label>
           <Input

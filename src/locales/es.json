@@ -240,7 +240,20 @@
     "relationRequired": "Debe indicar su relación con el Grupo",
     "anonymityRequired": "Debe indicar si desea mantener su identidad en el anonimato",
     "emailRequired": "El correo electrónico es requerido",
-    "invalidEmail": "Por favor ingrese un correo electrónico válido"
+    "invalidEmail": "Por favor ingrese un correo electrónico válido",
+    "validationError": "Error de validación",
+    "irregularityTypeRequired": "Debe seleccionar al menos un tipo de irregularidad",
+    "detailsRequired": "Debe proporcionar los detalles de la irregularidad",
+    "specifyKnowledge": "Debe especificar cómo se enteró de la situación",
+    "specifyExternals": "Debe especificar quiénes son las personas externas involucradas",
+    "specifyHowHidden": "Debe especificar cómo se está ocultando la situación",
+    "specifyWhoHides": "Debe especificar quiénes están ocultando la situación",
+    "specifyWhoKnows": "Debe especificar quiénes conocen la situación",
+    "specifyHowKnow": "Debe especificar cómo se enteraron de la situación",
+    "evidenceTypeRequired": "Debe indicar si cuenta con evidencias",
+    "specifyPhysicalDelivery": "Debe especificar cómo entregará la evidencia física",
+    "specifyDigitalFiles": "Debe adjuntar los archivos digitales",
+    "specifyWhereToObtain": "Debe especificar dónde se pueden obtener las evidencias"
   }
 }
 

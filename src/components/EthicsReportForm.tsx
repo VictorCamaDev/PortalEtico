@@ -136,23 +136,52 @@ export function EthicsReportForm() {
         return
       }
 
+          // Validar campos obligatorios
+      const validationErrors = []
+
+      // Validar tipo de irregularidad
+      if (!data.tiposIrregularidad || data.tiposIrregularidad.length === 0) {
+        validationErrors.push(t("errors.irregularityTypeRequired"))
+      }
+
+      // Validar detalles
+      if (!data.detalles?.trim()) {
+        validationErrors.push(t("errors.detailsRequired"))
+      }
+
+      // Validar campos condicionales
+      if (data.conocimiento === "otro" && !data.conocimientoOtro?.trim()) {
+        validationErrors.push(t("errors.specifyKnowledge"))
+      }
+
+      if (data.involucraExternos === "si" && !data.quienesExternos?.trim()) {
+        validationErrors.push(t("errors.specifyExternals"))
+      }
+
+      if (data.ocultado === "si") {
+        if (!data.comoOcultado?.trim()) validationErrors.push(t("errors.specifyHowHidden"))
+        if (!data.quienesOcultan?.trim()) validationErrors.push(t("errors.specifyWhoHides"))
+      }
+
+      if (data.conocimientoPrevio === "si") {
+        if (!data.quienesConocen?.trim()) validationErrors.push(t("errors.specifyWhoKnows"))
+        if (!data.comoConocen?.trim()) validationErrors.push(t("errors.specifyHowKnow"))
+      }
+
       // Validar correo electrónico según si es anónimo o no
-      if (
-        data.anonimo === "si" &&
-        (!data.correoContacto || !data.correoContacto.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i))
-      ) {
-        toast({
-          title: t("errors.emailRequired"),
-          description: t("errors.invalidEmail"),
-          variant: "destructive",
-        })
-        return
+      if (data.anonimo === "si" && (!data.correoContacto || !data.correoContacto.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i))) {
+        validationErrors.push(t("errors.invalidEmail"))
       }
 
       if (data.anonimo === "no" && (!data.correo || !data.correo.match(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i))) {
+        validationErrors.push(t("errors.invalidEmail"))
+      }
+
+      // Si hay errores, mostrarlos y detener el envío
+      if (validationErrors.length > 0) {
         toast({
-          title: t("errors.emailRequired"),
-          description: t("errors.invalidEmail"),
+          title: t("errors.validationError"),
+          description: validationErrors.join("\n"),
           variant: "destructive",
         })
         return
@@ -163,7 +192,7 @@ export function EthicsReportForm() {
       // Para compatibilidad, asignamos el valor de tiposIrregularidad a tipoIrregularidad
       const dataToSend = {
         ...data,
-        tipoIrregularidad: data.tiposIrregularidad.join(", "),
+        tipoIrregularidad: data.tiposIrregularidad.join(", ")
       }
 
       console.log("Datos a enviar:", JSON.stringify(dataToSend)) // Añadir este log para verificar
