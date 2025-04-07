@@ -69,7 +69,7 @@ export function Pregunta6() {
       </RadioGroup>
 
       {/* Campos condicionales según el tipo de evidencia */}
-      {evidenciaTipo === "fisica" && (
+      {evidenciaTipo === "Tengo evidencia física que deseo entregar" && (
         <div className="ml-6 space-y-2">
           <Label htmlFor="evidencia.entregaFisica">{t("question6.fields.physicalDelivery")}</Label>
           <Input
@@ -80,7 +80,7 @@ export function Pregunta6() {
         </div>
       )}
 
-      {evidenciaTipo === "digital" && (
+      {evidenciaTipo === "Tengo evidencia digital que deseo entregar" && (
         <div className="ml-6 space-y-2">
           <Label htmlFor="evidencia.archivos">{t("question6.fields.digitalFiles")}</Label>
           <div className="flex items-center gap-2">
@@ -96,7 +96,7 @@ export function Pregunta6() {
       {["No me es posible proporcionar evidencias de ningún tipo", "No tengo evidencias, pero podría obtenerlas", "Tengo evidencia física que deseo entregar", "Tengo evidencia digital que deseo entregar", "Tengo evidencia física y digital que me gustaría entregar"].includes(evidenciaTipo) && (
         <div className="ml-6 space-y-2">
           <Label htmlFor="evidencia.dondeObtener">
-            {evidenciaTipo === "no_posible" || evidenciaTipo === "no_tengo"
+            {evidenciaTipo === "No me es posible proporcionar evidencias de ningún tipo" || evidenciaTipo === "No tengo evidencias, pero podría obtenerlas"
               ? t("question6.fields.whereToObtain")
               : t("question6.fields.whereElse")}
           </Label>

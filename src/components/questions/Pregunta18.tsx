@@ -26,7 +26,7 @@ export function Pregunta18() {
 
     // Registrar correoContacto con validación condicional
     register("correoContacto", {
-      required: anonimo === "si" ? t("errors.emailRequired") : false,
+      required: anonimo === "Sí" ? t("errors.emailRequired") : false,
       pattern: {
         value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
         message: t("errors.invalidEmail"),
@@ -55,7 +55,7 @@ export function Pregunta18() {
         </div>
       </RadioGroup>
 
-      {anonimo === "si" && (
+      {anonimo === "Sí" && (
         <div className="ml-6 space-y-2 pt-4">
           <Label htmlFor="correoContacto" className="text-base font-medium flex items-center gap-2">
             <Mail className="h-4 w-4 text-blue-600" />

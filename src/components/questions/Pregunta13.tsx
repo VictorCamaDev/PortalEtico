@@ -40,7 +40,7 @@ export function Pregunta13() {
         </div>
       </RadioGroup>
 
-      {conocimientoPrevio === "si" && (
+      {conocimientoPrevio === "Sí" && (
         <div className="ml-6 space-y-4">
           <div className="space-y-2">
             <Label htmlFor="quienesConocen">{t("additionalQuestions.who")}</Label>

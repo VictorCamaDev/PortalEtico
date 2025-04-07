@@ -36,7 +36,7 @@ export function Pregunta11() {
         </div>
       </RadioGroup>
 
-      {involucraExternos === "si" && (
+      {involucraExternos === "Sí" && (
         <div className="ml-6 space-y-2">
           <Label htmlFor="quienesExternos">{t("additionalQuestions.who")}</Label>
           <Input

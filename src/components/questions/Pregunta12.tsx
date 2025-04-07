@@ -33,7 +33,7 @@ export function Pregunta12() {
         </div>
       </RadioGroup>
 
-      {ocultado === "si" && (
+      {ocultado === "Sí" && (
         <div className="ml-6 space-y-4">
           <div className="space-y-2">
             <Label htmlFor="comoOcultado">{t("additionalQuestions.how")}</Label>
