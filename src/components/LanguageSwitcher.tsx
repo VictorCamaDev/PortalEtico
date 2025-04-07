@@ -8,10 +8,10 @@ import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation()
-  const currentLanguage = i18n.language
+  const currentLanguage = (i18n as any).language
 
   const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng)
+    (i18n as any).changeLanguage(lng)
     // Guardar la preferencia de idioma
     localStorage.setItem("i18nextLng", lng)
   }

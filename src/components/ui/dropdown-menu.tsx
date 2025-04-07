@@ -2,6 +2,7 @@ import * as React from "react"
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu"
 import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
+// import { Slot } from "@radix-ui/react-slot";
 
 // Variantes para los estilos del dropdown
 const dropdownVariants = cva(
@@ -35,7 +36,7 @@ export interface DropdownMenuProps
 
 const DropdownMenuComponent = React.forwardRef<HTMLDivElement, DropdownMenuProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
-    const Comp = asChild ? "div" : "div" // Cambia esto si prefieres usar un Slot de Radix UI
+    // const Comp = asChild ? Slot : "div";
     return (
       <DropdownMenu.Root>
         <DropdownMenu.Trigger className={cn(dropdownVariants({ variant, size, className }))}>
@@ -57,6 +58,5 @@ const DropdownMenuComponent = React.forwardRef<HTMLDivElement, DropdownMenuProps
 
 DropdownMenuComponent.displayName = "DropdownMenuComponent"
 
-// Exportar los componentes directamente desde Radix UI para usarlos en otras partes
 export { DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from "@radix-ui/react-dropdown-menu"
 export { DropdownMenuComponent, dropdownVariants }

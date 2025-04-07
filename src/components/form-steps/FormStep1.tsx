@@ -13,11 +13,10 @@ import { useEffect } from "react"
 export function FormStep1() {
   const {
     register,
-    control,
-    formState: { errors },
+    // control,
+    formState: {},
   } = useFormContext<FormData>()
 
-  // Registrar el textarea de detalles manualmente para poder acceder a él desde Pregunta5
   useEffect(() => {
     register("detalles", { required: true })
   }, [register])

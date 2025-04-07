@@ -1,38 +1,24 @@
-import i18n from "i18next"
-import { initReactI18next } from "react-i18next"
-import LanguageDetector from "i18next-browser-languagedetector"
 
-// Importamos las traducciones desde los archivos JSON
-import translationES from "../locales/es.json"
-import translationEN from "../locales/en.json"
+import i18next from 'i18next';
+import { initReactI18next } from 'react-i18next';
 
-// Recursos de traducción
+import translationES from "../locales/es.json";
+import translationEN from "../locales/en.json";
+
 const resources = {
-  es: {
-    translation: translationES,
-  },
-  en: {
-    translation: translationEN,
-  },
-}
+  es: { translation: translationES },
+  en: { translation: translationEN }
+};
 
-i18n
-  // Detecta el idioma del navegador
-  .use(LanguageDetector)
-  // Pasa el i18n a react-i18next
+i18next
   .use(initReactI18next)
-  // Inicializa i18next
   .init({
     resources,
+    lng: "es",
     fallbackLng: "es",
     interpolation: {
-      escapeValue: false, // React ya escapa los valores
-    },
-    detection: {
-      order: ["localStorage", "navigator"],
-      caches: ["localStorage"],
-    },
-  })
+      escapeValue: false
+    }
+  });
 
-export default i18n
-
+export default i18next;

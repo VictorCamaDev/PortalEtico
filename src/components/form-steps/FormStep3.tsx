@@ -11,7 +11,7 @@ export function FormStep3() {
   const {
     register,
     watch,
-    formState: { errors },
+    formState: {},
   } = useFormContext<FormData>()
   const { t } = useTranslation()
 

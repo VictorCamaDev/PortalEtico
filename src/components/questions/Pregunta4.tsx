@@ -16,12 +16,12 @@ import { FormField, FormItem, FormControl } from "@/components/ui/form"
 import { useTranslation } from "react-i18next"
 
 export function Pregunta4({ onChange }: IProps4) {
-  const { control, watch, setValue } = useFormContext<FormData>()
+  const { control, watch } = useFormContext<FormData>()
   const fecha = watch("fecha") || ""
   const { t, i18n } = useTranslation()
 
   // Seleccionar el locale según el idioma actual
-  const dateLocale = i18n.language === "es" ? es : enUS
+  const dateLocale = (i18n as any).language === "es" ? es : enUS
 
   // Mantener la compatibilidad con el componente original
   useEffect(() => {
