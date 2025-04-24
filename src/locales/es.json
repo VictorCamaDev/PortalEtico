@@ -36,7 +36,7 @@
   "steps": {
     "mainData": "Datos principales",
     "additionalData": "Datos adicionales",
-    "contact": "Opciones de Contacto",
+    "contact": "Datos de Contacto",
     "personalInfo": "Información personal",
     "summary": "Resumen"
   },
@@ -143,7 +143,7 @@
     "fields": {
       "physicalDelivery": "Indique la forma en la que entregará la información física",
       "digitalFiles": "Seleccione evidencias digitales (máx. 5 archivos, 20MB)",
-      "whereToObtain": "¿Dónde el Grupo podría obtener evidencia?",
+      "whereToObtain": "¿Dónde se podrían obtener evidencias?",
       "whereElse": "¿Dónde más se podría obtener evidencia?"
     },
     "fileAttach": "Los archivos se adjuntarán al enviar el formulario."

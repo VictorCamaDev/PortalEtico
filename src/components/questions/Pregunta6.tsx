@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-
 import { useState, useEffect } from "react"
 import { useFormContext } from "react-hook-form"
 import type { FormData } from "../EthicsReportForm"
@@ -20,10 +19,8 @@ export function Pregunta6() {
   const { t } = useTranslation()
 
   useEffect(() => {
-    // Registrar campos obligatorios
     register("evidencia.tipo", { required: t("errors.evidenceTypeRequired") })
 
-    // Validaciones condicionales
     if (evidenciaTipo === "Tengo evidencia física que deseo entregar") {
       register("evidencia.entregaFisica", { required: t("errors.specifyPhysicalDelivery") })
     }
@@ -32,8 +29,13 @@ export function Pregunta6() {
       register("evidencia.archivos", { required: t("errors.specifyDigitalFiles") })
     }
 
-    if (["No me es posible proporcionar evidencias de ningún tipo", "No tengo evidencias, pero podría obtenerlas"].includes(evidenciaTipo)) {
+    if (evidenciaTipo === "No tengo evidencias, pero podría obtenerlas") {
       register("evidencia.dondeObtener", { required: t("errors.specifyWhereToObtain") })
+    }
+
+    if (evidenciaTipo === "Tengo evidencia física y digital que me gustaría entregar") {
+      register("evidencia.entregaFisica", { required: t("errors.specifyPhysicalDelivery") })
+      register("evidencia.archivos", { required: t("errors.specifyDigitalFiles") })
     }
   }, [register, t, evidenciaTipo])
 
@@ -86,7 +88,40 @@ export function Pregunta6() {
         </div>
       </RadioGroup>
 
-      {/* Campos condicionales según el tipo de evidencia */}
+      {evidenciaTipo === "No tengo evidencias, pero podría obtenerlas" && (
+        <div className="ml-6 space-y-2">
+          <Label htmlFor="evidencia.dondeObtener">{t("question6.fields.whereToObtain")}</Label>
+          <Input
+            id="evidencia.dondeObtener"
+            value={watch("evidencia.dondeObtener") || ""}
+            onChange={(e) => setValue("evidencia.dondeObtener", e.target.value)}
+          />
+        </div>
+      )}
+
+      {evidenciaTipo === "Tengo evidencia física y digital que me gustaría entregar" && (
+        <div className="ml-6 space-y-4">
+          <div className="space-y-2">
+            <Label htmlFor="evidencia.archivos">{t("question6.fields.digitalFiles")}</Label>
+            <div className="flex items-center gap-2">
+              <Input id="evidencia.archivos" type="file" className="cursor-pointer" onChange={handleFileChange} />
+              <Button type="button" variant="outline" size="icon">
+                <FileUp className="h-4 w-4" />
+              </Button>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <Label htmlFor="evidencia.entregaFisica">{t("question6.fields.physicalDelivery")}</Label>
+            <Input
+              id="evidencia.entregaFisica"
+              value={watch("evidencia.entregaFisica") || ""}
+              onChange={(e) => setValue("evidencia.entregaFisica", e.target.value)}
+            />
+          </div>
+        </div>
+      )}
+
       {evidenciaTipo === "Tengo evidencia física que deseo entregar" && (
         <div className="ml-6 space-y-2">
           <Label htmlFor="evidencia.entregaFisica">{t("question6.fields.physicalDelivery")}</Label>
@@ -110,24 +145,6 @@ export function Pregunta6() {
           <p className="text-sm text-muted-foreground">{t("question6.fileAttach")}</p>
         </div>
       )}
-
-      {["No me es posible proporcionar evidencias de ningún tipo", "No tengo evidencias, pero podría obtenerlas", "Tengo evidencia física que deseo entregar", "Tengo evidencia digital que deseo entregar", "Tengo evidencia física y digital que me gustaría entregar"].includes(evidenciaTipo) && (
-        <div className="ml-6 space-y-2">
-          <Label htmlFor="evidencia.dondeObtener">
-            {evidenciaTipo === "No me es posible proporcionar evidencias de ningún tipo" || evidenciaTipo === "No tengo evidencias, pero podría obtenerlas"
-              ? t("question6.fields.whereToObtain")
-              : t("question6.fields.whereElse")}
-          </Label>
-          <Textarea
-            id="evidencia.dondeObtener"
-            value={watch("evidencia.dondeObtener") || ""}
-            onChange={(e) => setValue("evidencia.dondeObtener", e.target.value)}
-            className="min-h-[100px]"
-            placeholder={t("form.writeHere")}
-          />
-        </div>
-      )}
     </div>
   )
 }
-
